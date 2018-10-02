@@ -6,7 +6,7 @@ const csvFilePath = path.join(__dirname, 'data', 'customer-data.csv');
 const csv2Json = (csvPath = csvFilePath, callback) => {
     csvToJson().fromFile(csvPath)
         .then((json) => {
-            callback(null, JSON.stringify(json));
+            callback(null, JSON.stringify(json, null, 2));
         });
 }
 
