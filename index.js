@@ -12,6 +12,6 @@ const csv2Json = (csvPath = csvFilePath, callback) => {
 
 csv2Json(process.argv[2], (error, data) => {
     if (error) return console.error(error);
-    console.log(`Got this JSON: ${JSON.stringify(data)}`);
+    console.log(`Got this JSON: ${data}`);
     fs.writeFileSync(path.join(__dirname, 'output', 'customer-data.json'), data, 'utf-8');
 });
